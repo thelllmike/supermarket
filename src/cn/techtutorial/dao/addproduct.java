@@ -59,7 +59,7 @@ public class addproduct extends HttpServlet {
 		if (adb == 1) {
 
 			// response.sendRedirect("Success.jsp");
-			RequestDispatcher dis = request.getRequestDispatcher("UserLogin.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("index.jsp");
 			dis.forward(request, response);
 			System.out.println("Successful");
 		} else if (adb == 0) {
