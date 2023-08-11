@@ -46,7 +46,7 @@ if (cart_list != null) {
                 <h2>Add Your Product Details</h2>
                 <hr>
                 <br>
-                <form method="post" action="AddNewProduct" enctype="multipart/form-data">
+                <form method="post" action="addproduct" >
                     <div class="mb-3">
                         <label for="name" class="form-label">Product Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -64,7 +64,7 @@ if (cart_list != null) {
 
                     <div class="mb-3">
                         <label for="image" class="form-label">Image</label>
-                        <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+                        <input type="file" class="form-control" id="image" name="image" accept="image/*" >
                     </div>
 
                     <button type="submit" class="btn btn-primary" name="submit">Add Product</button>
