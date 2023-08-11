@@ -16,6 +16,11 @@
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
+		<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>3.3.3</version> <!-- Updated version -->
+        </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>

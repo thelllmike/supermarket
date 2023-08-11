@@ -37,6 +37,10 @@
 					<div class="text-center">
 						<button type="submit" class="btn btn-primary">Login</button>
 					</div>
+					<div class="text-center">
+					<label>Still Doesn't have an Account?</label>
+						<button type="submit" class="btn btn-info ms-5" style="color:white"><a href="register.jsp">Register </a></button>
+					</div>
 				</form>
 			</div>
 		</div>

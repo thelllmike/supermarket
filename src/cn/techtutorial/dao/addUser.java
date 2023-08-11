@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /**
- * Servlet implementation class addproduct
+ * Servlet implementation class adduser
  */
-@WebServlet("/addproduct")
-public class addproduct extends HttpServlet {
+@WebServlet("/addUser")
+public class addUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public addproduct() {
+    public addUser() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,29 +42,28 @@ public class addproduct extends HttpServlet {
 		doGet(request, response);
 		
 		String name = request.getParameter("name");
-		String category = request.getParameter("category");
-		String price = request.getParameter("price");
-		String image = request.getParameter("image");
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
 		
 
 	    System.out.println("Received data from frontend:");
 	    System.out.println("Name: " + name);
-	    System.out.println("Category: " + category);
-	    System.out.println("Price: " + price);
-	    System.out.println("Image: " + image);
+	    System.out.println("Email: " + email);
+	    System.out.println("password: " + password);
 		
 		int adb = 3;
-		adb = Products.insertProduct(name, category, price, image);
+		adb = Register.insertUser(name, email, password);
 
 		if (adb == 1) {
+
 			// response.sendRedirect("Success.jsp");	
-			RequestDispatcher dis = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("login.jsp");
 			dis.forward(request, response);
 			System.out.println("Successful");
 		} else if (adb == 0) {
 
 			// response.sendRedirect("unsuccess.jsp");
-			RequestDispatcher dis2 = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher dis2 = request.getRequestDispatcher("login.jsp");
 			dis2.forward(request, response);
 			System.out.println("UnSuccessful");
 		}
