@@ -22,6 +22,8 @@
 				} else {
 				%>
 				<li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
+				<li class="nav-item"><a class="nav-link" href="adminProductView.jsp">view</a></li>
+						<li class="nav-item"><a class="nav-link" href="adminUsersView.jsp">user view</a></li>
 				<%
 				}
 				%>
