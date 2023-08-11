@@ -17,7 +17,7 @@ public class Register {
 	        Class.forName("com.mysql.cj.jdbc.Driver");
 	        Connection con = DriverManager.getConnection(url, user, pwd);
 
-	        String sql = "INSERT INTO register_user (name, email, password) VALUES (?, ?, ?)";
+	        String sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
 	        PreparedStatement pstmt = con.prepareStatement(sql);
 	        pstmt.setString(1, name);
 	        pstmt.setString(2, email);
