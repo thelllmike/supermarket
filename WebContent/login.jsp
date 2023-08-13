@@ -37,15 +37,7 @@
 
     <%@include file="/includes/footer.jsp"%>
 
-    <%
-        String userEmail = request.getParameter("login-email");
-        String userPassword = request.getParameter("login-password");
-        
-        if ("admin@gmail.com".equals(userEmail) && "password".equals(userPassword)) {
-            // Redirect to another page if email and password match
-            response.sendRedirect("admin.jsp");
-        }
-    %>
+  
     <%@include file="/includes/footer.jsp"%>
 </body>
 </html>

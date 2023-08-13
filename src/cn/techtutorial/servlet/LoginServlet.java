@@ -25,19 +25,27 @@ public class LoginServlet extends HttpServlet {
             String email = request.getParameter("login-email");
             String password = request.getParameter("login-password");
 
+            // Simulate successful login for the admin
             if ("admin@gmail.com".equals(email) && "password".equals(password)) {
-                // Simulate successful login for the admin
                 User admin = new User();
                 admin.setEmail(email);
                 admin.setPassword(password);
 
                 request.getSession().setAttribute("auth", admin);
-                response.sendRedirect("admin.jsp");
+                response.sendRedirect("admin.jsp"); // Redirect to admin page
             } else {
-                out.println("Invalid credentials");
+                // Attempt user login using the database
+                UserDao udao = new UserDao(DbCon.getConnection());
+                User user = udao.userLogin(email, password);
+                if (user != null) {
+                    request.getSession().setAttribute("auth", user);
+                    response.sendRedirect("index.jsp");
+                } else {
+                    out.println("Invalid credentials");
+                }
             }
 
-        } catch (IOException e) {
+        } catch (IOException | SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     }

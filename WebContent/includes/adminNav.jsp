@@ -11,10 +11,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link" href="index.jsp">Home</a></li>
-<<<<<<< HEAD
-			
-=======
->>>>>>> fda26694ea570652b3bf7220117bdaf41e602432
+
 				<%
 				if (auth != null) {
 				%>
