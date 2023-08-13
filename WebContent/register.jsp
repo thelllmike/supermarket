@@ -24,7 +24,7 @@ if (cart_list != null) {
 <html>
 <head>
     <meta charset="ISO-8859-1">
-    <title>E-Commerce Cart</title>
+    <title>Supermarket</title>
     <!-- Include Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
