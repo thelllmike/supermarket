@@ -19,7 +19,7 @@ if (auth != null) {
 <%@include file="/includes/head.jsp"%>
 <meta charset="ISO-8859-1">
 
-<title>Insert title here</title>
+<title>Supermarket</title>
 </head>
 <body>
 <%@include file="/includes/adminNav.jsp"%>

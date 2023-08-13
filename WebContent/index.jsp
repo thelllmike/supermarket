@@ -21,7 +21,7 @@ if (cart_list != null) {
 <html>
 <head>
 <%@include file="/includes/head.jsp"%>
-<title>E-Commerce Cart</title>
+<title>Supermarket</title>
 </head>
 <body>
 	<%@include file="/includes/navbar.jsp"%>

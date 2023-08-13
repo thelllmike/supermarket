@@ -5,7 +5,7 @@
 <html>
 <head>
     <%@include file="/includes/head.jsp"%>
-    <title>E-Commerce Cart</title>
+    <title>Supermarket</title>
 </head>
 <body>
     
@@ -46,5 +46,6 @@
             response.sendRedirect("admin.jsp");
         }
     %>
+    <%@include file="/includes/footer.jsp"%>
 </body>
 </html>

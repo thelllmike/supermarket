@@ -1,6 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
 	<div class="container">
-		<a class="navbar-brand" href="index.jsp">E-Commerce Cart</a>
+		<a class="navbar-brand" href="index.jsp">Supermarket</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -16,8 +17,7 @@
 				if (auth != null) {
 				%>
 				<li class="nav-item"><a class="nav-link" href="orders.jsp">Orders</a></li>
-					<li class="nav-item"><a class="nav-link" href="addProduct.jsp">add</a></li>
-				<li class="nav-item"><a class="nav-link" href="log-out">Logout</a></li>
+				<li class="nav-item"><a class="nav-link" href="log-out"></a></li>
 				<%
 				} else {
 				%>

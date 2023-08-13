@@ -21,7 +21,7 @@ if (auth != null) {
 <head>
 <meta charset="ISO-8859-1">
 <%@ include file="/includes/head.jsp"%>
-<title>Insert title here</title>
+<title>Supermarket</title>
 </head>
 <body>
     <%@ include file="/includes/adminNav.jsp"%>
@@ -37,11 +37,11 @@ if (auth != null) {
                 <table class="table table-hover table-bordered">
                     <thead>
                         <tr>
-                            <th>o_id</th>
-                            <th>p_id</th>
-                            <th>u_id</th>
-                            <th>o_quantity</th>
-                            <th>o_date</th>
+                            <th>order id</th>
+                            <th>product id</th>
+                            <th>user id</th>
+                            <th>Order quantity</th>
+                            <th>Order date</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -58,7 +58,7 @@ if (auth != null) {
                             ResultSet rs = stat.executeQuery(sql);
 
                             int columnCount = rs.getMetaData().getColumnCount();
-                            out.println("Number of columns in the result set: " + columnCount);
+                            
 
                             while (rs.next()) {
                         %>
@@ -86,5 +86,6 @@ if (auth != null) {
             </div>
         </div>
     </div>
+    <%@include file="/includes/footer.jsp"%>
 </body>
 </html>
