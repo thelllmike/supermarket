@@ -68,9 +68,19 @@ if (auth != null) {
                             <td><%= rs.getString(3) %></td>
                             <td><%= rs.getDouble(4) %></td> <!-- Assuming the price is a double or numeric type -->
                             <td><%= rs.getString(5) %></td>
+                            
+                            <td><a href='updateProduct.jsp?id=<%=rs.getInt("id")%>' class="btn btn-primary">Update</a></td>
                             <td>
-                                <button class="btn btn-primary">Update</button>
-                                <button class="btn btn-info">Delete</button>
+                           
+                                
+                                
+                                <form action = "deleteProduct" method = "post">
+								       <input type = "text" name = "id" value = "<%= rs.getInt("id")%>" hidden>
+								       
+								     
+								         <button type = "submit" class="btn btn-info">Delete</button>
+								   </form>
+                                
                             </td>
                         </tr>
                         <%

@@ -3,6 +3,7 @@ package cn.techtutorial.dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.Statement;
 
 public class Products {
 
@@ -33,6 +34,74 @@ public class Products {
 	        e.printStackTrace();
 	    }
 	    return isSuccess;
+	}
+	
+	
+	public static int UpdateProduct(int id,String name, String category, String price, String image) {
+		
+		int result = 0;
+		
+		String url = "jdbc:mysql://localhost:3306/ecommerce_cart";
+		String user = "root";
+		String pwd = "root";
+  
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url,user,pwd);
+			
+			Statement stmt = con.createStatement();	
+			String sql = "update products set name = '"+name+"',category = '"+category+"',price = '"+price+"',image = '"+image+"' where id = '"+id+"'";
+			System.out.println("SQL Result: "+sql);
+			int rs = stmt.executeUpdate(sql);
+			System.out.println("SQL Result: "+rs);
+			
+			if(rs > 0) {
+				result = 1;
+			}
+			else {
+				result = 0;
+			}
+			
+		
+	}catch(Exception e){
+		
+		e.printStackTrace();
+	}
+		
+		return result;
+	}
+	public static int deleteProduct(int id) {
+	    int result=0;
+	    
+	    String url = "jdbc:mysql://localhost:3306/ecommerce_cart";
+		String user = "root";
+		String pwd = "root";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection(url, user, pwd);
+
+			Statement stmt = con.createStatement();
+			String sql = "delete from products where id ='"+id+"'" ;
+
+			int rn = stmt.executeUpdate(sql);
+			if(rn>0)
+			{
+				result=1;
+			}
+			else
+			{
+				result=0;
+			}
+			
+		
+	}catch(Exception e)
+		
+	    {
+		e.printStackTrace();
+	    }
+		
+		return result;
 	}
 
 }
