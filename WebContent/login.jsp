@@ -46,5 +46,6 @@
             response.sendRedirect("admin.jsp");
         }
     %>
+    <%@include file="/includes/footer.jsp"%>
 </body>
 </html>

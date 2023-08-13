@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
 	<div class="container">
 		<a class="navbar-brand" href="index.jsp">E-Commerce Cart</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -16,7 +16,6 @@
 				if (auth != null) {
 				%>
 				<li class="nav-item"><a class="nav-link" href="orders.jsp">Orders</a></li>
-					<li class="nav-item"><a class="nav-link" href="addProduct.jsp">add</a></li>
 				<li class="nav-item"><a class="nav-link" href="log-out">Logout</a></li>
 				<%
 				} else {

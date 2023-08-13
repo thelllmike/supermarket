@@ -56,6 +56,7 @@
 						<td><%=o.getCategory() %></td>
 						<td><%=o.getQunatity() %></td>
 						<td><%=dcf.format(o.getPrice()) %></td>
+						<td><a class="btn btn-sm w-100 btn-primary" href="">Buy</a></td>
 						<td><a class="btn btn-sm btn-danger" href="cancel-order?id=<%=o.getOrderId()%>">Cancel Order</a></td>
 					</tr>
 				<%}

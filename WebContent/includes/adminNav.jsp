@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
 	<div class="container">
 		<a class="navbar-brand" href="index.jsp">Admin E-Commerce Cart</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"

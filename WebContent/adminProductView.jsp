@@ -58,7 +58,7 @@ if (auth != null) {
                             ResultSet rs = stat.executeQuery(sql);
 
                             int columnCount = rs.getMetaData().getColumnCount();
-                            out.println("Number of columns in the result set: " + columnCount);
+                            
 
                             while (rs.next()) {
                         %>
@@ -86,5 +86,6 @@ if (auth != null) {
             </div>
         </div>
     </div>
+    <%@include file="/includes/footer.jsp"%>
 </body>
 </html>
