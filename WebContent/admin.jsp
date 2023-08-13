@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<%@include file="/includes/adminNav.jsp"%>
 <title>Insert title here</title>
 </head>
 <body>

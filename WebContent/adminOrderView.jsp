@@ -9,18 +9,17 @@
 <%@page import="cn.techtutorial.dao.ProductDao"%>
 <%@page import="cn.techtutorial.model.*"%>
 <%@page import="java.util.*"%>
-
-<%
+ 
+ <%
 User auth = (User) request.getSession().getAttribute("auth");
 if (auth != null) {
     request.setAttribute("person", auth);
 }
 %>
-
+ 
+   
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
 <%@include file="/includes/head.jsp"%>
 
 <title>Insert title here</title>
@@ -50,7 +49,7 @@ if (auth != null) {
 				%>
 				<li class="nav-item"><a class="nav-link" href="adminProductView.jsp">view</a></li>
 				<li class="nav-item"><a class="nav-link" href="adminOrderView.jsp">Order View</a></li>
-				<li class="nav-item"><a class="nav-link" href="adminUsersView.jsp">user view</a></li>
+						<li class="nav-item"><a class="nav-link" href="adminUsersView.jsp">user view</a></li>
 				<%
 				}
 				%>
@@ -59,6 +58,7 @@ if (auth != null) {
 	</div>
 </nav>
 
+<head>
 
   <br>
        <div class = "hole">
@@ -74,12 +74,13 @@ if (auth != null) {
 	                <table class="table table-hover table-bordered">
 			<thead>
 					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Category</th>
-						<th>Price</th>
-						<th>Image</th>
-						<th>Actions</th>
+					<th scope="col">ID</th>
+					<th scope="col">Date</th>
+					<th scope="col">Name</th>
+					<th scope="col">Category</th>
+					<th scope="col">Quantity</th>
+					<th scope="col">Price</th>
+					<th scope="col">Cancel</th>
 					
 					</tr>
 				</thead>
@@ -99,12 +100,12 @@ if (auth != null) {
 							if(query!=null)
 							{
 								
-								sql = "select * from ecommerce_cart.products";
+								sql = "select * from ecommerce_cart.orders";
 								
 							}
 							else
 							{
-								sql = "select * from ecommerce_cart.products";
+								sql = "select * from ecommerce_cart.orders";
 								
 							}
 							ResultSet rs = stat.executeQuery(sql);
@@ -119,6 +120,8 @@ if (auth != null) {
 								<td><%=rs.getString(3) %></td>
 								<td><%=rs.getString(4) %></td>
 								<td><%=rs.getString(5) %></td>
+								<td><%=rs.getString(6) %></td>
+								<td><%=rs.getString(7) %></td>
 								<td><button class="btn btn-primary">Update</button> <button class="btn btn-info">Delete</button></td>
 							
 						
@@ -152,4 +155,3 @@ if (auth != null) {
 
 
 </body>
-</html>
