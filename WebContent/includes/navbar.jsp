@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
 	<div class="container">
 		<a class="navbar-brand" href="index.jsp">Supermarket</a>
@@ -16,7 +17,7 @@
 				if (auth != null) {
 				%>
 				<li class="nav-item"><a class="nav-link" href="orders.jsp">Orders</a></li>
-				<li class="nav-item"><a class="nav-link" href="log-out">Logout</a></li>
+				<li class="nav-item"><a class="nav-link" href="log-out"></a></li>
 				<%
 				} else {
 				%>
